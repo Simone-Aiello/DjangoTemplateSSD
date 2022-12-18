@@ -9,4 +9,4 @@ class SuperHero(models.Model):
     city = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.epic_name
+        return f"{self.epic_name}"
