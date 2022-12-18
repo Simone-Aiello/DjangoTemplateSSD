@@ -9,3 +9,8 @@
     Serializers
     Permission, groups
     Testing Django models and urls
+# Useful things
+## How to query all the groups name associated with a user
+    user_groups = list(request.user.groups.values_list('name', flat=True))
+## Check read only methods
+    if request.method in permissions.SAFE_METHODS:
